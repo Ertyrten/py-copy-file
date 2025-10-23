@@ -17,7 +17,6 @@ def copy_file(command: str) -> None:
         return
 
     try:
-        # ВИПРАВЛЕНО: Розбили довгий рядок на два вкладені
         with open(source_file, "r") as file_in:
             with open(dest_file, "w") as file_out:
                 content = file_in.read()
@@ -28,4 +27,3 @@ def copy_file(command: str) -> None:
         print(error_message)
     except IOError as e:
         print(f"Error copying file: {e}")
-  
